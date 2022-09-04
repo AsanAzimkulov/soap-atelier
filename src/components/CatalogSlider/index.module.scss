@@ -1,0 +1,109 @@
+@import '../../scss/_uiKit.scss';
+@import '../../scss/_variables.scss';
+
+
+
+.root{
+  position: relative;
+  padding-top: 22px; 
+  .filters{
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 30px;
+    width: max-content;
+    margin-bottom: 30px;
+    &__item{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30px;
+      color: $light-grey-2;
+      text-decoration: none;
+      border: none;
+      padding-bottom: 1px;
+      border-bottom: 1px solid $light-grey-2;
+      &_active, &:hover, &:active{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        padding-bottom: 2px;
+        color: $black-standart;
+        border-bottom: none;
+        text-decoration: none;
+      }
+    }
+  }
+  .slider{
+    &_navButton{
+      border: none;
+      position: absolute;
+      top: 45%;
+      width: 60px;
+      height: 60px;
+      left: -110px;
+      border-radius: 50%;
+      background-image: url(../../assets/images/icons/slider-arrow.svg);
+      background: $black;
+      z-index: 2;
+      &_prev{
+
+      }
+      &_next{
+
+      }
+    }
+  }
+  .products{
+    position: relative;
+    &__item{
+      padding: 0px 17px 0px;
+      text-align: left;
+      background: #FFFFFF;
+      width: fit-content;
+      &__picture{
+        text-align: center;
+      }
+      &__name{
+        color: $black-standart;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 15px;
+      }
+      &__info{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 20px;
+        color: $light-grey-2;
+      }
+      &__downBar{
+        border-top: 0.5px solid $light-grey-2;
+        padding: 11px 0 10px;
+        display: grid;
+        grid-auto-flow: column;
+        grid-column-gap: 12px;
+        justify-items: center;
+        align-items: center;
+      }
+      &__price{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        color: $black-standart;
+      }
+      &__button{
+        padding: 8px 0px;
+        border-radius: 5px;
+        color:  white;
+        background: $basic-2;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        @include button;
+      }
+    }
+  }
+}

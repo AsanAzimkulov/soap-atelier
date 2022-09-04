@@ -1,0 +1,30 @@
+@import '../../scss/variables.scss';
+
+.root{
+  background: $light-grey;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-top: 12px;
+  text-align: center;
+  .title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: $black-standart;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+  }
+  .text{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: $light-grey-2;
+    margin-bottom: 25px;
+  }
+  .textHighlighted{
+    border-radius: 0px 0px 5px 5px;
+    background: $basic-1;
+    color: $light-grey;
+    padding: 12px 0px;
+  }
+}

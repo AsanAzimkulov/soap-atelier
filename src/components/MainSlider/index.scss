@@ -1,0 +1,25 @@
+@import '../../scss/variables';
+
+.mainSlider{
+  .swiper{
+    &-pagination-bullets{
+      width: fit-content;
+      margin: 0 auto;
+      margin-top: 10px;
+      display: grid;
+      grid-auto-flow: column;
+      grid-column-gap: 12px;
+      grid-template-columns: max-content;
+      .swiper-pagination-bullet{
+        display: block;
+        border-radius: 50%;
+        background: $light-grey-2;
+        width: 8px;
+        height: 8px;
+        &-active{
+          background: $basic-1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import '../../scss/variables';
+
+.layout{
+  position: relative;
+  max-width: 1690px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 160px minmax(1fr 1170px) 290px;
+  grid-column-gap: 35px;
+  grid-template-rows: minmax(94.5px, auto) 1fr minmax(269px, auto) ;
+  padding: 0px 20px;
+  grid-template-areas: 
+  "sideNav header sideBar"
+  "sideNav main sideBar"
+  'sideNav main sideBar';
+
+  .header{
+    grid-area: header;
+  }
+
+  .pageWrapper{
+    grid-area: main;
+    height: 100%;
+    background: $light-grey;
+    padding: 0 110px;
+    display: grid;
+    grid-template-areas: 
+    "content"
+    "footer";
+    grid-template-rows: 1fr minmax(269px, auto);
+  }
+
+  .sideNav{
+    grid-area: sideNav;
+    width: 160px;
+  }
+
+  .sideBar{
+    grid-area: sideBar;
+    width: 290px;
+  }
+  .footer{
+    grid-area: footer;
+  }
+
+
+
+  .pageContent{
+    grid-area: content;
+    background: $light-grey;
+    font-family: 'DIN Pro';
+    font-style: normal;
+    max-width: 100%;
+    overflow: hidden;
+
+    section{
+      margin: 30px 0;
+    }
+  }
+
+}

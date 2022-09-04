@@ -1,0 +1,16 @@
+@use 'sass:color';
+
+@mixin button {
+  cursor: pointer;
+    color:  white;
+    background: $basic-2;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+  &:hover{
+    background: color.adjust($basic-2, $lightness: -3%);
+  }
+  &:active{
+    background: color.adjust($basic-2, $lightness: -6%);
+  }
+}
