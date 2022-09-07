@@ -2,12 +2,14 @@ import classNames from 'classnames';
 import React from 'react';
 import s from './index.module.scss';
 import searchIcon from '../../assets/images/icons/search.svg';
+import HamburgerMenu from '../HamburgerMenu';
 
 type PropsType = {
   role?: string,
+  onOpenMenu: () => void
 }
 
-const Header = ({ role }: PropsType) => {
+const Header = ({ role, onOpenMenu }: PropsType) => {
   return (
     <header className={classNames(role, s.root, 'stickyTop')}>
       <div className={s.contacts}>
@@ -48,6 +50,9 @@ const Header = ({ role }: PropsType) => {
         </nav>
         <button className={s.panel__search}>
           <img src={searchIcon} alt="Искать" className={s.panel__search__icon} />
+        </button>
+        <button className={classNames(s.panel__search, s.panel__mobileMenu)}>
+          <HamburgerMenu onClick={onOpenMenu} />
         </button>
       </div>
     </header >

@@ -5,16 +5,24 @@ import { TOffers } from '../../types/offer';
 
 type DataSlice = {
   offers: TOffers | [],
+  offer: TOffer | undefined,
 }
 
 const initialState: DataSlice = {
   offers: [],
+  offer: undefined,
 }
 
 export const dataSlice = createSlice({
   name: 'data',
   initialState,
   reducers: {
+    setOffers: (state, action: PayloadAction<TOffers>) => {
+      state.offers = action.payload;
+    },
+    setOffer: (state, action: PayloadAction<TOffer | undefined>) => {
+      state.offer = action.payload;
+    },
     addOffer: (state, action: PayloadAction<TOffer>) => {
       state.offers = [...state.offers, action.payload];
     },
@@ -28,3 +36,5 @@ export const dataSlice = createSlice({
 })
 
 export default dataSlice.reducer;
+
+export const { setOffers, setOffer, addOffer, removeOffer, clearOffers } = dataSlice.actions;

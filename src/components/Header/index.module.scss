@@ -86,5 +86,17 @@
       cursor: pointer;
       background: transparent;
     }
+    &__mobileMenu{
+      display: none;
+    }
+  }
+
+  @media(max-width: 1100px){
+    .panel{
+      grid-template-columns: 1fr 3fr 100px 60px;
+      &__mobileMenu{
+        display: block;
+      }
+    }
   }
 }

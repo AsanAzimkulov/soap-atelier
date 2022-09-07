@@ -1,0 +1,81 @@
+.root{
+    border-radius: 50%;
+    position: fixed;
+    outline: none;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #00d663;
+    left: 90vw;
+    top: 80vh;
+    z-index: 99;
+    &:hover{
+      color: #fff;
+      background-color: #00b051;
+      border-color: #00a34b;
+    }
+    &_shake {
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      perspective: 1000px;
+    }
+  
+  .icon {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 14px;
+    top: 10px;
+  }
+  .iconClose{
+    left: 12px !important;
+  }
+
+
+  @media(min-width: 1375px){
+    display: none;
+  }
+  
+
+  
+  @media(max-width: 800px) {
+      left: 80vw;
+  }
+  
+  @media(max-width: 475px) {
+      left: 75vw;
+      width: 60px;
+      height: 60px;
+    }
+  
+    .icon {
+      height: 45px;
+      width: 45px;
+      left: 10px;
+      top: 14px
+    }
+  
+  
+  
+  
+  
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+}

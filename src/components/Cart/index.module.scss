@@ -1,18 +1,24 @@
 @import '../../scss/variables.scss';
 
 .root{
-  background: $light-grey;
   border-radius: 5px;
   overflow: hidden;
   padding-top: 12px;
   text-align: center;
+  &_empty{
+  background: $light-grey;
+  .title{
+    padding: 0 10px;
+  }
+  }
   .title{
     font-weight: 500;
     font-size: 24px;
     line-height: 30px;
     color: $black-standart;
-    padding: 0px 10px;
+    padding: 5px 10px;
     margin-bottom: 10px;
+    background: $light-grey;
   }
   .text{
     font-weight: 400;
@@ -27,4 +33,5 @@
     color: $light-grey;
     padding: 12px 0px;
   }
+
 }
