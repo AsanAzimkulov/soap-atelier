@@ -13,5 +13,14 @@
     &_item{
 
     }
+    @media(max-width: 1730px){
+      grid-template-columns: 1fr 1fr;
+    }
+    @media(max-width: 667px){
+      grid-template-columns: 1fr;
+      &_item{
+        margin: 0 auto;
+      }
+    }
   }
 }

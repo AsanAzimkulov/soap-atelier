@@ -2,10 +2,12 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { AxiosInstance } from "axios";
 import data from './data/slice';
 import user from './user/slice';
+import userInterface from './interface/slice';
 
 const rootReducer = combineReducers({
   data,
   user,
+  userInterface,
 })
 
 export const setupStore = (api: AxiosInstance) =>

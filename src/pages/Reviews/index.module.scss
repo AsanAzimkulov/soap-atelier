@@ -1,0 +1,21 @@
+@import '../../scss/variables';
+
+.root{
+  color: $black-standart;
+  padding-top: 50px;
+  .title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 44px;
+  } 
+  .list{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    &_item{
+
+    }
+  }
+}

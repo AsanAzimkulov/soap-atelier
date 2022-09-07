@@ -6,10 +6,9 @@ import HamburgerMenu from '../HamburgerMenu';
 
 type PropsType = {
   role?: string,
-  onOpenMenu: () => void
 }
 
-const Header = ({ role, onOpenMenu }: PropsType) => {
+const Header = ({ role}: PropsType) => {
   return (
     <header className={classNames(role, s.root, 'stickyTop')}>
       <div className={s.contacts}>
@@ -48,11 +47,14 @@ const Header = ({ role, onOpenMenu }: PropsType) => {
           <a href="#" className={s.panel__menu__link}>Отзывы</a>
           <a href="#" className={s.panel__menu__link}>Доставка и оплата</a>
         </nav>
-        <button className={s.panel__search}>
+        <button className={s.panel__search} style={{
+          opacity: '0',
+          cursor: 'auto'
+        }}>
           <img src={searchIcon} alt="Искать" className={s.panel__search__icon} />
         </button>
         <button className={classNames(s.panel__search, s.panel__mobileMenu)}>
-          <HamburgerMenu onClick={onOpenMenu} />
+          <HamburgerMenu/>
         </button>
       </div>
     </header >

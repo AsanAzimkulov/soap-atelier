@@ -1,24 +1,23 @@
 import React, { useState, useRef } from 'react';
 import s from './index.module.scss';
 import Hamburger from 'hamburger-react';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
+import { selectUserInterface } from '../../store/interface/selectors';
+import { setIsMobileMenuOpened } from '../../store/interface/slice';
 
 
 type PropsType = {
-  onClick: () => void,
+
 }
 
-const HamburgerMenu = ({ onClick }: PropsType) => {
-  const isMounted = useRef<boolean>(false);
-
-  const [isOpen, setOpen] = useState(false)
-
-  if (isMounted.current) {
-    onClick();
-  } else {
-    isMounted.current = true;
-  }
+const HamburgerMenu = ({ }: PropsType) => {
+  const { isMobileMenuOpened } = useAppSelector(selectUserInterface);
+  const dispatch = useAppDispatch();
+  const onToggle = (flag: any) => dispatch(setIsMobileMenuOpened(flag));
   return (
-    < Hamburger toggled={isOpen} toggle={setOpen} />
+
+    < Hamburger toggled={isMobileMenuOpened} toggle={onToggle} />
+
   )
 }
 

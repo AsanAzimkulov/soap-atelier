@@ -43,6 +43,8 @@ const CatalogSlider = () => {
           },
           320: {
             'slidesPerView': 1,
+            'centeredSlides': true,
+
           }
         }}
       >

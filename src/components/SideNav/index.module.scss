@@ -42,6 +42,30 @@
   }
 
   @media(min-width: 1375px){
-    
+
+  }
+
+  .mobileMenu{
+    display: none;
+    @media(max-width: 850px){
+      display: block;
+      margin-top: 30px;
+      margin-left: -30px;
+      padding-left: 4px;
+      &>div:first-child{
+        border-bottom: 0.5px solid $light-grey-2;
+      }
+      &>div:nth-child(2){
+        grid-template-columns: 1fr;
+        &>button:nth-last-child(1){
+          display: none;
+        }
+        &>nav{
+          grid-template-columns: 1fr;
+          grid-auto-flow: row;
+          margin: 0 auto;
+        }
+      }
+    }
   }
 }

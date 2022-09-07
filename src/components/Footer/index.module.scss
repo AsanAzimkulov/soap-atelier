@@ -64,4 +64,27 @@
       color: $light-grey-2;
     }
   }
+
+
+  @media(max-width: 850px){
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 20px; 
+    .socials{
+      border-right: none;
+    }
+
+    .links{
+      margin-bottom: 30px;
+    }
+  }
+  @media(max-width: 768px){
+    grid-template-columns: 1fr;
+  justify-items: stretch;
+
+    .socials,.links,.info{
+      border: none;
+      border-bottom: 0.5px solid $light-grey-2;
+      padding-bottom: 20px;
+    }
+  }
 }

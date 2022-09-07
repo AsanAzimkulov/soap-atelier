@@ -1,0 +1,66 @@
+
+@import '../../scss/_uiKit';
+@import '../../scss/variables';
+
+.root{
+  color: $black-standart;
+  padding-top: 55px;
+  .title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  .text{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .form{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    .error{
+      &_required{
+        color:red;
+        font-size: 0.8em;
+        margin: -17px 0px 0px 0px;
+      }
+    }
+    .input{
+      padding: 8px 15px;
+      border: none;
+      outline: 1px solid $light-grey-2;
+      outline-offset: -1px;
+      border-radius: 5px;
+      &:required{
+        position: relative;
+        &::before{
+          display: block;
+          position: absolute;
+          font-size: 1em;
+          content: '*';
+          color: red;
+          top: 4px;
+          left: 12px;
+        }
+      }
+      &:active, &:focus{
+        outline: 1px solid $basic-1;
+        outline-offset: -1px;
+      }
+      &_hidden{
+        display: none;
+      }
+    }
+    .submit{
+      @include button;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      padding: 10px 0;
+      border-radius: 5px;
+    }
+  }
+}

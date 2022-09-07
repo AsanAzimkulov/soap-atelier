@@ -17,7 +17,20 @@
 
   .header{
     grid-area: header;
+    @media(max-width: 850px){
+      &>div:nth-child(2){
+        grid-template-columns: auto;
+        justify-items: end;
+        &>*:not(*>button:nth-last-child(1)){
+        display: none;
+        }
+      }
+
+      &*>button:nth-last-child(1){
+      justify-self: end;
+      }
   }
+}
 
   .pageWrapper{
     grid-area: main;
@@ -29,6 +42,15 @@
     "content"
     "footer";
     grid-template-rows: 1fr minmax(269px, auto);
+    @media(max-width: 850px){
+      padding: 0 60px;
+    }
+    @media(max-width: 750px){
+      padding: 0 30px;
+    }
+    @media(max-width: 650px){
+      padding: 0 15px;
+    }
   }
 
   .sideNav{
@@ -94,7 +116,8 @@
     .sideNav{
       &>div{
         opacity: 1 !important;
-        transition: opacity 500ms ease-in;
+        transition: opacity 500ms ease-in; 
+        pointer-events: all !important;
       }
     }
   }
@@ -114,6 +137,7 @@
       z-index: 30;
       &>div{
         opacity: 0;
+        pointer-events: none;
         padding-left: 20px;
         max-height: calc(100vh - 100px);
         overflow: auto;

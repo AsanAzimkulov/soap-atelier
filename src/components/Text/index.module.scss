@@ -33,7 +33,7 @@
         position: absolute;
         bottom:15px;
         border: none;
-        left: 47%;
+        left: 38%;
         display: grid;
         grid-auto-flow: column;
         align-items: center;
@@ -43,6 +43,12 @@
         color: $basic-2;
         line-height: 100%;
         cursor: pointer;
+        @media(max-width: 475px){
+          left: 32%;
+        }
+        @media(max-width: 375px){
+          left: 28%;
+        }
         &_icon{
 
         }
